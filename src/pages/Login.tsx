@@ -62,7 +62,7 @@ export default function Login() {
         </form>
 
         <div className="login-divider">This is a prototype — any credentials work</div>
-        <Link className="login-site-link" to="/site">Visit the public Victory Capital website →</Link>
+        <Link className="login-site-link" to="/marketing">Visit the public Victory Capital website →</Link>
       </div>
     </div>
   );

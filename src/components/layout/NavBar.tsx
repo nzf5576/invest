@@ -33,7 +33,7 @@ export default function NavBar() {
         </div>
       </div>
       <div className="nav-right">
-        <Link className="nav-icon-btn" to="/site" aria-label="Visit the public Victory Capital website" title="Public website">🌐</Link>
+        <Link className="nav-icon-btn" to="/marketing" aria-label="Visit the public Victory Capital website" title="Public website">🌐</Link>
         <button className="nav-icon-btn" aria-label="Search">🔍</button>
         <div style={{ position: 'relative' }}>
           <button

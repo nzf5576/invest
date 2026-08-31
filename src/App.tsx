@@ -27,7 +27,8 @@ export default function App() {
     <AuthProvider>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/site" element={<MarketingSite />} />
+        <Route path="/site" element={<Login />} />
+        <Route path="/marketing" element={<MarketingSite />} />
         <Route element={<ProtectedLayout><AppLayout /></ProtectedLayout>}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/account/:accountId" element={<AccountDetail />} />
