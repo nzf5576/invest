@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface Solution {
   icon: string;
   title: string;
@@ -16,7 +18,7 @@ export default function PortfolioSolutions() {
     <div className="card">
       <div className="card-header">
         <h2 className="card-title">Portfolio Solutions</h2>
-        <button className="card-link">View All →</button>
+        <Link className="card-link" to="/invest-with-us" style={{ textDecoration: 'none' }}>View All →</Link>
       </div>
       <div className="solutions-grid" role="list">
         {solutions.map((s) => (

@@ -24,9 +24,15 @@ export default function NavBar() {
           <NavLink to="/dashboard" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')} end>
             Home
           </NavLink>
-          <a href="#" role="menuitem">Invest with Us</a>
-          <a href="#" role="menuitem">Insights</a>
-          <a href="#" role="menuitem">Tools &amp; Resources</a>
+          <NavLink to="/invest-with-us" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Invest with Us
+          </NavLink>
+          <NavLink to="/insights" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Insights
+          </NavLink>
+          <NavLink to="/tools-resources" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Tools &amp; Resources
+          </NavLink>
           <NavLink to="/documents" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
             Document Center
           </NavLink>

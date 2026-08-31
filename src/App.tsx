@@ -15,6 +15,9 @@ import DocumentCenter from './pages/DocumentCenter';
 import Forms from './pages/Forms';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
+import InvestWithUs from './pages/InvestWithUs';
+import Insights from './pages/Insights';
+import ToolsResources from './pages/ToolsResources';
 
 function ProtectedLayout({ children }: { children: React.ReactNode }) {
   const { isAuthenticated } = useAuth();
@@ -38,6 +41,9 @@ export default function App() {
           <Route path="/forms" element={<Forms />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/invest-with-us" element={<InvestWithUs />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/tools-resources" element={<ToolsResources />} />
         </Route>
         <Route element={<ProtectedLayout><FocusedLayout /></ProtectedLayout>}>
           <Route path="/rmd/:accountId" element={<RmdFlow />} />
