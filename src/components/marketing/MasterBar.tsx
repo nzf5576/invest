@@ -156,10 +156,10 @@ export default function MasterBar({ active, onSelectProperty, onScrollToContact 
                   {key === 'corporate' ? 'Victory Capital — Corporate' : franchises[key].franchiseName}
                 </button>
               ))}
-              <button className="mkt-property-menu-item">
+              <Link className="mkt-property-menu-item" to="/investment-franchises" style={{ textDecoration: 'none' }} onClick={() => setPropertyOpen(false)}>
                 <span className="mkt-property-menu-dot" style={{ background: '#94a3b8' }} />
                 View All 9 Franchises →
-              </button>
+              </Link>
             </div>
           )}
         </div>

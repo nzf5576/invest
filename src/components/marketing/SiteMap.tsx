@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { FranchiseKey } from '../../types/marketing';
 import { siteMapFranchises } from '../../data/franchises';
 
@@ -41,11 +42,11 @@ export default function SiteMap({ onSelectProperty }: Props) {
           <div className="mkt-sm-connector-row"><div className="mkt-sm-line-vertical" /></div>
 
           <div className="mkt-sm-row">
-            <div className="mkt-sm-node mkt-sm-directory">
+            <Link to="/investment-franchises" className="mkt-sm-node mkt-sm-directory" style={{ textDecoration: 'none', cursor: 'pointer' }}>
               <div className="mkt-sm-node-icon">📂</div>
               <div className="mkt-sm-node-title">Investment Franchises Directory</div>
               <div className="mkt-sm-node-sub">vcm.com/investment-franchises</div>
-            </div>
+            </Link>
           </div>
 
           <div className="mkt-sm-connector-row"><div className="mkt-sm-line-vertical" /></div>

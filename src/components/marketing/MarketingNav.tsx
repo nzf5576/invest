@@ -1,14 +1,18 @@
+import { Link } from 'react-router-dom';
 import type { FranchiseProperty } from '../../types/marketing';
 
 interface Props {
   property: FranchiseProperty;
+  active?: 'home' | 'franchises' | 'insights';
 }
 
-export default function MarketingNav({ property }: Props) {
+export default function MarketingNav({ property, active = 'home' }: Props) {
+  const activeStyle = { color: 'var(--mkt-accent)', fontWeight: 700 };
+
   return (
     <nav className="mkt-nav">
       <div className="mkt-nav-left">
-        <a href="#" className="mkt-brand-lockup">
+        <Link to="/" className="mkt-brand-lockup">
           <span className="mkt-vc-logo"><span>Victory</span>Capital</span>
           {property.showFranchise && (
             <>
@@ -16,14 +20,14 @@ export default function MarketingNav({ property }: Props) {
               <span className="mkt-franchise-name">{property.franchiseName}</span>
             </>
           )}
-        </a>
+        </Link>
         {property.showFranchise && (
           <span className="mkt-franchise-badge">🏛️ A Victory Capital Investment Franchise</span>
         )}
         <div className="mkt-nav-links">
-          <a href="#" style={{ color: 'var(--mkt-accent)', fontWeight: 700 }}>Home</a>
-          <a href="#">Investment Franchises</a>
-          <a href="#">Insights</a>
+          <Link to="/" style={active === 'home' ? activeStyle : undefined}>Home</Link>
+          <Link to="/investment-franchises" style={active === 'franchises' ? activeStyle : undefined}>Investment Franchises</Link>
+          <Link to="/market-insights" style={active === 'insights' ? activeStyle : undefined}>Insights</Link>
           <a href="#">About Us</a>
           <button>Contact</button>
         </div>

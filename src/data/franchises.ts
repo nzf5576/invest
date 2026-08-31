@@ -100,6 +100,15 @@ export const franchises: Record<FranchiseKey, FranchiseProperty> = {
 
 export const demoProperties: FranchiseKey[] = ['corporate', 'westend', 'pioneer', 'sycamore'];
 
+export const nonInteractiveFranchiseBlurbs: Record<string, string> = {
+  integrity: 'Fixed income specialists focused on high-quality, research-driven credit strategies.',
+  newenergy: 'Private credit investing in renewable energy and infrastructure projects.',
+  rs: 'Growth and income equity strategies built on fundamental, bottom-up research.',
+  trivalent: 'Systematic, quantitative approaches to global equity investing.',
+  victoryincome: 'Income-focused strategies spanning dividend equity and preferred securities.',
+  vcs: 'Multi-asset and outsourced portfolio solutions for institutions and advisors.',
+};
+
 export const siteMapFranchises: SiteMapFranchise[] = [
   { key: 'westend', icon: '🍁', name: 'WestEnd Advisors', color: '#0f766e', interactive: true, propertyKey: 'westend' },
   { key: 'pioneer', icon: '🧭', name: 'Pioneer Investments', color: '#7c3aed', interactive: true, propertyKey: 'pioneer' },

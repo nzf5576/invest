@@ -6,6 +6,8 @@ import Dashboard from './pages/Dashboard';
 import AccountDetail from './pages/AccountDetail';
 import RmdFlow from './pages/RmdFlow';
 import MarketingSite from './pages/MarketingSite';
+import InvestmentFranchises from './pages/InvestmentFranchises';
+import MarketingInsights from './pages/MarketingInsights';
 import Login from './pages/Login';
 import Trade from './pages/Trade';
 import Contribution from './pages/Contribution';
@@ -32,6 +34,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MarketingSite />} />
         <Route path="/marketing" element={<Navigate to="/" replace />} />
+        <Route path="/investment-franchises" element={<InvestmentFranchises />} />
+        <Route path="/market-insights" element={<MarketingInsights />} />
         <Route path="/login" element={<Login />} />
         <Route path="/site" element={<Login />} />
         <Route element={<ProtectedLayout><AppLayout /></ProtectedLayout>}>

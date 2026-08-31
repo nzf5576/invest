@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import type { FranchiseKey } from '../types/marketing';
-import { franchises } from '../data/franchises';
+import { demoProperties, franchises } from '../data/franchises';
 import PreviewBar from '../components/marketing/PreviewBar';
 import MasterBar from '../components/marketing/MasterBar';
 import MarketingNav from '../components/marketing/MarketingNav';
@@ -12,8 +13,14 @@ import TrustBand from '../components/marketing/TrustBand';
 import MarketingFooter from '../components/marketing/MarketingFooter';
 import '../styles/marketing.css';
 
+function isFranchiseKey(value: string | null): value is FranchiseKey {
+  return demoProperties.includes(value as FranchiseKey);
+}
+
 export default function MarketingSite() {
-  const [activeKey, setActiveKey] = useState<FranchiseKey>('corporate');
+  const [searchParams] = useSearchParams();
+  const franchiseParam = searchParams.get('franchise');
+  const [activeKey, setActiveKey] = useState<FranchiseKey>(isFranchiseKey(franchiseParam) ? franchiseParam : 'corporate');
   const contactRef = useRef<HTMLDivElement>(null);
 
   const property = franchises[activeKey];

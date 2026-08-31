@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { FranchiseProperty } from '../../types/marketing';
 
 interface Props {
@@ -16,7 +17,8 @@ export default function MarketingFooter({ property }: Props) {
           <div>
             <div className="mkt-footer-col-title">Company</div>
             <button className="mkt-footer-link">About Victory Capital</button>
-            <button className="mkt-footer-link">Investment Franchises</button>
+            <Link className="mkt-footer-link" to="/investment-franchises">Investment Franchises</Link>
+            <Link className="mkt-footer-link" to="/market-insights">Insights</Link>
             <button className="mkt-footer-link">Leadership</button>
             <button className="mkt-footer-link">Careers</button>
           </div>
