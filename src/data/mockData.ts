@@ -72,9 +72,41 @@ export const savedApplications: SavedApplication[] = [
 ];
 
 export const messages: Message[] = [
-  { id: 'm0', text: 'Confirmation: Your Request to Process a Distribution Has Been Received', date: '07/23/2026', unread: true },
-  { id: 'm1', text: 'Confirmation: Your Request to Process a Distribution Has Been Received', date: '07/23/2026', unread: true },
-  { id: 'm2', text: 'Your Q2 Statement is now available', date: '07/10/2026', unread: true },
+  {
+    id: 'm0',
+    text: 'Confirmation: Your Request to Process a Distribution Has Been Received',
+    date: '07/23/2026',
+    unread: true,
+    body: 'We\'ve received your request to process a distribution from account *0667. Please allow 3-5 business days for delivery. You can review the details of this request under your account\'s Activity tab.',
+  },
+  {
+    id: 'm1',
+    text: 'Your Beneficiary Information May Be Out of Date',
+    date: '07/20/2026',
+    unread: true,
+    body: 'We periodically ask account holders to confirm their beneficiary designations are current. Please review your beneficiaries on file under Account Details to make sure they reflect your wishes.',
+  },
+  {
+    id: 'm2',
+    text: 'Your Q2 Statement is now available',
+    date: '07/10/2026',
+    unread: true,
+    body: 'Your Q2 2026 account statement has been generated and is available in the Document Center. Statements are retained online for 7 years.',
+  },
+  {
+    id: 'm3',
+    text: 'Trade Confirmation: Buy Order Executed',
+    date: '06/28/2026',
+    unread: false,
+    body: 'Your buy order for Victory Capital Growth Fund (USCGX) has executed. A confirmation has been posted to your Document Center.',
+  },
+  {
+    id: 'm4',
+    text: 'Welcome to the redesigned inVest portal',
+    date: '06/01/2026',
+    unread: false,
+    body: 'We\'ve refreshed the client portal with a new dashboard, expanded account activity views, and faster money movement tools. Let us know what you think using the help button in the corner of any page.',
+  },
 ];
 
 export const accounts: Record<string, Account> = {

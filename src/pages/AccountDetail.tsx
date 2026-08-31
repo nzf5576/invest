@@ -6,6 +6,11 @@ import AccountTabBar from '../components/account/AccountTabBar';
 import HoldingsTable from '../components/account/HoldingsTable';
 import PortfolioAllocation from '../components/account/PortfolioAllocation';
 import AccountSidebar from '../components/account/AccountSidebar';
+import ActivityTab from '../components/account/tabs/ActivityTab';
+import DividendsTab from '../components/account/tabs/DividendsTab';
+import CostBasisTab from '../components/account/tabs/CostBasisTab';
+import PerformanceTab from '../components/account/tabs/PerformanceTab';
+import AccountDocumentsTab from '../components/account/tabs/AccountDocumentsTab';
 
 export default function AccountDetail() {
   const { accountId } = useParams();
@@ -16,11 +21,11 @@ export default function AccountDetail() {
 
   return (
     <div>
-      <AccountActionBar account={account} />
+      <AccountActionBar account={account} onActivityClick={() => setActiveTab(1)} />
       <AccountTabBar active={activeTab} onChange={setActiveTab} />
 
       <div className="main" role="main">
-        {activeTab === 0 ? (
+        {activeTab === 0 && (
           <div className="main-grid">
             <div>
               <HoldingsTable account={account} />
@@ -28,13 +33,12 @@ export default function AccountDetail() {
             </div>
             <AccountSidebar account={account} />
           </div>
-        ) : (
-          <div className="card">
-            <div className="card-pad" style={{ textAlign: 'center', color: 'var(--text-4)', padding: '48px 22px' }}>
-              This section isn't wired up in the prototype yet.
-            </div>
-          </div>
         )}
+        {activeTab === 1 && <ActivityTab account={account} />}
+        {activeTab === 2 && <DividendsTab account={account} />}
+        {activeTab === 3 && <CostBasisTab account={account} />}
+        {activeTab === 4 && <PerformanceTab account={account} />}
+        {activeTab === 5 && <AccountDocumentsTab account={account} />}
       </div>
 
       <div className="back-bar">

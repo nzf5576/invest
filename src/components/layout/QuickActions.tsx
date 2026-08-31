@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { iraAccountId } from '../../data/mockData';
+import { defaultAccountId, iraAccountId } from '../../data/mockData';
 
 interface QuickAction {
   label: string;
@@ -12,11 +12,11 @@ interface QuickAction {
 
 const actions: QuickAction[] = [
   { label: 'Open New Account', icon: '➕', color: 'var(--navy)', bg: '#eef4ff', shadow: 'rgba(0,74,152,0.15)' },
-  { label: 'Transfer Account', icon: '↔️', color: 'var(--primary)', bg: '#f0f7ff', shadow: 'rgba(94,138,180,0.15)' },
-  { label: 'Make a Contribution', icon: '💰', color: 'var(--green)', bg: '#f0fdf4', shadow: 'rgba(8,163,103,0.15)' },
+  { label: 'Transfer Account', icon: '↔️', color: 'var(--primary)', bg: '#f0f7ff', shadow: 'rgba(94,138,180,0.15)', to: '/transfer' },
+  { label: 'Make a Contribution', icon: '💰', color: 'var(--green)', bg: '#f0fdf4', shadow: 'rgba(8,163,103,0.15)', to: `/contribution/${defaultAccountId}` },
   { label: 'Request Distribution', icon: '📤', color: 'var(--orange)', bg: '#fff7ed', shadow: 'rgba(232,119,34,0.15)', to: `/rmd/${iraAccountId}` },
-  { label: 'Forms', icon: '📋', color: 'var(--purple)', bg: '#faf5ff', shadow: 'rgba(123,94,167,0.15)' },
-  { label: 'Upload Documents', icon: '📎', color: 'var(--teal)', bg: '#f0fdfe', shadow: 'rgba(0,163,173,0.15)' },
+  { label: 'Forms', icon: '📋', color: 'var(--purple)', bg: '#faf5ff', shadow: 'rgba(123,94,167,0.15)', to: '/forms' },
+  { label: 'Upload Documents', icon: '📎', color: 'var(--teal)', bg: '#f0fdfe', shadow: 'rgba(0,163,173,0.15)', to: '/documents' },
   { label: 'Live Chat', icon: '💬', color: 'var(--neutral)', bg: '#f8fafc', shadow: 'rgba(83,86,90,0.15)' },
 ];
 

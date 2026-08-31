@@ -5,9 +5,10 @@ import { portfolioAsOf } from '../../data/mockData';
 
 interface Props {
   account: Account;
+  onActivityClick: () => void;
 }
 
-export default function AccountActionBar({ account }: Props) {
+export default function AccountActionBar({ account, onActivityClick }: Props) {
   return (
     <div className="account-action-bar" role="region" aria-label="Account navigation and actions">
       <div className="account-action-inner">
@@ -22,8 +23,10 @@ export default function AccountActionBar({ account }: Props) {
           </div>
           <div className="account-btns">
             <button className="btn-outline" aria-label="Download account data">📥 Download</button>
-            <button className="btn-outline" aria-label="View account activity">📋 Activity</button>
-            <button className="btn-trade" aria-label="Place a trade">💱 Place a Trade</button>
+            <button className="btn-outline" aria-label="View account activity" onClick={onActivityClick}>📋 Activity</button>
+            <Link className="btn-trade" to={`/trade/${account.id}`} aria-label="Place a trade" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
+              💱 Place a Trade
+            </Link>
           </div>
         </div>
 

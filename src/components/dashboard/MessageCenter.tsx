@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { messages } from '../../data/mockData';
 
 export default function MessageCenter() {
@@ -20,7 +21,9 @@ export default function MessageCenter() {
           </div>
         ))}
       </div>
-      <button className="btn-view-all">View All Messages ({messages.length}) ▼</button>
+      <Link className="btn-view-all" to="/messages" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>
+        View All Messages ({messages.length}) ▼
+      </Link>
     </div>
   );
 }

@@ -10,7 +10,7 @@ const manageServices = [
   { icon: '🔄', label: 'Automatic Investing', bg: '#eef4ff' },
   { icon: '📤', label: 'Automatic Withdrawal', bg: '#fff7ed' },
   { icon: '💰', label: 'Dividends & Capital Gains', bg: '#f0fdf4' },
-  { icon: '🏦', label: 'Bank Accounts', bg: '#f4fbea' },
+  { icon: '🏦', label: 'Bank Accounts', bg: '#f4fbea', to: '/profile' },
 ];
 
 const managePreferences = [
@@ -57,13 +57,21 @@ export default function AccountSidebar({ account }: Props) {
 
       <div className="sidebar-card">
         <div className="sidebar-card-title">⚙️ Manage Services</div>
-        {manageServices.map((s) => (
-          <button className="manage-link" key={s.label}>
-            <div className="manage-link-icon" style={{ background: s.bg }} aria-hidden="true">{s.icon}</div>
-            {s.label}
-            <span className="manage-link-arrow" aria-hidden="true">›</span>
-          </button>
-        ))}
+        {manageServices.map((s) =>
+          s.to ? (
+            <Link className="manage-link" key={s.label} to={s.to}>
+              <div className="manage-link-icon" style={{ background: s.bg }} aria-hidden="true">{s.icon}</div>
+              {s.label}
+              <span className="manage-link-arrow" aria-hidden="true">›</span>
+            </Link>
+          ) : (
+            <button className="manage-link" key={s.label}>
+              <div className="manage-link-icon" style={{ background: s.bg }} aria-hidden="true">{s.icon}</div>
+              {s.label}
+              <span className="manage-link-arrow" aria-hidden="true">›</span>
+            </button>
+          ),
+        )}
       </div>
 
       <div className="sidebar-card">
