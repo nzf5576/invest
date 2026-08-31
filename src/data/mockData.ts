@@ -1,8 +1,8 @@
 import type { Account, AccountTypeSummary, Goal, Message, SavedApplication } from '../types';
 
 export const currentUser = {
-  firstName: 'Janesh',
-  initials: 'J',
+  firstName: 'Linda',
+  initials: 'L',
 };
 
 export const specialist = {
