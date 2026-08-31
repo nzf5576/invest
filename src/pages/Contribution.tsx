@@ -26,7 +26,7 @@ export default function Contribution() {
   const holding = useMemo(() => account?.holdings.find((h) => h.id === form.holdingId), [account, form.holdingId]);
   const amountNum = Number(form.amount) || 0;
 
-  if (!account) return <Navigate to="/" replace />;
+  if (!account) return <Navigate to="/dashboard" replace />;
 
   function updateForm(patch: Partial<ContributionFormState>) {
     setForm((prev) => ({ ...prev, ...patch }));
@@ -49,7 +49,7 @@ export default function Contribution() {
   return (
     <div className="flow-wrap">
       <div className="flow-crumb">
-        <Link to="/">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>{account.registration}</Link> &nbsp;›&nbsp; Make a Contribution
+        <Link to="/dashboard">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>{account.registration}</Link> &nbsp;›&nbsp; Make a Contribution
       </div>
 
       <h1 className="flow-page-title">Make a Contribution</h1>

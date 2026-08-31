@@ -44,7 +44,7 @@ export default function Transfer() {
   return (
     <div className="flow-wrap">
       <div className="flow-crumb">
-        <Link to="/">Home</Link> &nbsp;›&nbsp; Transfer an Account
+        <Link to="/dashboard">Home</Link> &nbsp;›&nbsp; Transfer an Account
       </div>
 
       <h1 className="flow-page-title">Transfer an Account to Victory Capital</h1>
@@ -108,7 +108,7 @@ export default function Transfer() {
 
               <div className="flow-btn-row">
                 <div className="flow-left-actions">
-                  <button className="flow-btn flow-btn-cancel" onClick={() => navigate('/')}>Cancel</button>
+                  <button className="flow-btn flow-btn-cancel" onClick={() => navigate('/dashboard')}>Cancel</button>
                 </div>
                 <button className="flow-btn flow-btn-primary" disabled={!canContinueStep1} onClick={() => goTo(2)}>
                   Continue to Review →
@@ -154,7 +154,7 @@ export default function Transfer() {
               heading="Your transfer request has been submitted"
               description="We'll reach out to your current institution to begin the transfer. You can track its status from your dashboard."
               confirmationNumber={confirmationNumber}
-              backTo="/"
+              backTo="/dashboard"
               backLabel="← Back to My Portfolio"
               rows={[
                 { label: 'From', value: `${form.fromInstitution} · ${form.fromAccountNumber}` },

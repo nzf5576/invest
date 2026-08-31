@@ -116,7 +116,7 @@ export default function MasterBar({ active, onSelectProperty, onScrollToContact 
                 </div>
                 <div className="mkt-login-submit-row">
                   {loginTab === 'investor' ? (
-                    <Link className="mkt-login-submit" to="/" onClick={() => setLoginOpen(false)}>
+                    <Link className="mkt-login-submit" to="/dashboard" onClick={() => setLoginOpen(false)}>
                       {panel.submitLabel}
                     </Link>
                   ) : (

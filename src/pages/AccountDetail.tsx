@@ -17,7 +17,7 @@ export default function AccountDetail() {
   const [activeTab, setActiveTab] = useState(0);
 
   const account = accountId ? accounts[accountId] : undefined;
-  if (!account) return <Navigate to="/" replace />;
+  if (!account) return <Navigate to="/dashboard" replace />;
 
   return (
     <div>
@@ -43,7 +43,7 @@ export default function AccountDetail() {
 
       <div className="back-bar">
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <Link className="back-link" to="/">← Back to My Portfolio</Link>
+          <Link className="back-link" to="/dashboard">← Back to My Portfolio</Link>
         </div>
       </div>
     </div>

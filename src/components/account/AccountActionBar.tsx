@@ -32,9 +32,9 @@ export default function AccountActionBar({ account, onActivityClick }: Props) {
 
         <div className="account-action-bottom" role="navigation" aria-label="Breadcrumb and account stats">
           <div className="acct-breadcrumb" aria-label="Breadcrumb">
-            <Link to="/">Home</Link>
+            <Link to="/dashboard">Home</Link>
             <span className="acct-breadcrumb-sep" aria-hidden="true">›</span>
-            <Link to="/">My Portfolio</Link>
+            <Link to="/dashboard">My Portfolio</Link>
             <span className="acct-breadcrumb-sep" aria-hidden="true">›</span>
             <span className="acct-breadcrumb-current" aria-current="page">{account.registration}</span>
           </div>

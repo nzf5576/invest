@@ -24,7 +24,7 @@ export default function RmdFlow() {
 
   const estimatedAmount = useMemo(() => (account ? Math.round(account.value * 0.0356 * 100) / 100 : 0), [account]);
 
-  if (!account) return <Navigate to="/" replace />;
+  if (!account) return <Navigate to="/dashboard" replace />;
 
   function updateForm(patch: Partial<RmdFormState>) {
     setForm((prev) => ({ ...prev, ...patch }));
@@ -49,7 +49,7 @@ export default function RmdFlow() {
   return (
     <div className="rmd-wrap">
       <div className="rmd-crumb">
-        <Link to="/">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>Required Minimum Distribution</Link> &nbsp;›&nbsp; Set Up Automatic RMD
+        <Link to="/dashboard">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>Required Minimum Distribution</Link> &nbsp;›&nbsp; Set Up Automatic RMD
       </div>
 
       <h1 className="rmd-page-title">Set Up Your Required Minimum Distribution</h1>

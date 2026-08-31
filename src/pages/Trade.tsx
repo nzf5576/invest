@@ -30,7 +30,7 @@ export default function Trade() {
   const estimatedShares = holding && form.basis === 'dollars' && holding.nav > 0 ? amountNum / holding.nav : amountNum;
   const estimatedDollars = holding && form.basis === 'shares' ? amountNum * holding.nav : amountNum;
 
-  if (!account) return <Navigate to="/" replace />;
+  if (!account) return <Navigate to="/dashboard" replace />;
 
   function updateForm(patch: Partial<TradeFormState>) {
     setForm((prev) => ({ ...prev, ...patch }));
@@ -53,7 +53,7 @@ export default function Trade() {
   return (
     <div className="flow-wrap">
       <div className="flow-crumb">
-        <Link to="/">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>{account.registration}</Link> &nbsp;›&nbsp; Place a Trade
+        <Link to="/dashboard">Home</Link> &nbsp;›&nbsp; <Link to={`/account/${accountId}`}>{account.registration}</Link> &nbsp;›&nbsp; Place a Trade
       </div>
 
       <h1 className="flow-page-title">Place a Trade</h1>

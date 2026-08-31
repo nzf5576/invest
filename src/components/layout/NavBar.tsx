@@ -17,11 +17,11 @@ export default function NavBar() {
   return (
     <nav className="main-nav" role="navigation" aria-label="Main navigation">
       <div className="nav-left">
-        <NavLink className="nav-logo" to="/" aria-label="Victory Capital inVest - Home">
+        <NavLink className="nav-logo" to="/dashboard" aria-label="Victory Capital inVest - Home">
           <span>Victory</span>Capital <em>inVest</em>
         </NavLink>
         <div className="nav-links" role="menubar">
-          <NavLink to="/" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')} end>
+          <NavLink to="/dashboard" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')} end>
             Home
           </NavLink>
           <a href="#" role="menuitem">Invest with Us</a>
@@ -33,7 +33,7 @@ export default function NavBar() {
         </div>
       </div>
       <div className="nav-right">
-        <Link className="nav-icon-btn" to="/marketing" aria-label="Visit the public Victory Capital website" title="Public website">🌐</Link>
+        <Link className="nav-icon-btn" to="/" aria-label="Visit the public Victory Capital website" title="Public website">🌐</Link>
         <button className="nav-icon-btn" aria-label="Search">🔍</button>
         <div style={{ position: 'relative' }}>
           <button

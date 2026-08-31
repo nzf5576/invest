@@ -11,14 +11,14 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   if (isAuthenticated) {
-    const redirectTo = (location.state as { from?: string } | null)?.from ?? '/';
+    const redirectTo = (location.state as { from?: string } | null)?.from ?? '/dashboard';
     return <Navigate to={redirectTo} replace />;
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     login();
-    navigate('/');
+    navigate('/dashboard');
   }
 
   return (
@@ -62,7 +62,7 @@ export default function Login() {
         </form>
 
         <div className="login-divider">This is a prototype — any credentials work</div>
-        <Link className="login-site-link" to="/marketing">Visit the public Victory Capital website →</Link>
+        <Link className="login-site-link" to="/">Visit the public Victory Capital website →</Link>
       </div>
     </div>
   );

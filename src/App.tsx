@@ -26,11 +26,12 @@ export default function App() {
   return (
     <AuthProvider>
       <Routes>
+        <Route path="/" element={<MarketingSite />} />
+        <Route path="/marketing" element={<Navigate to="/" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/site" element={<Login />} />
-        <Route path="/marketing" element={<MarketingSite />} />
         <Route element={<ProtectedLayout><AppLayout /></ProtectedLayout>}>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/account/:accountId" element={<AccountDetail />} />
           <Route path="/documents" element={<DocumentCenter />} />
           <Route path="/forms" element={<Forms />} />
