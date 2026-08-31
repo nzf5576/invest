@@ -16,7 +16,7 @@ export default function MarketingFooter({ property }: Props) {
           </div>
           <div>
             <div className="mkt-footer-col-title">Company</div>
-            <button className="mkt-footer-link">About Victory Capital</button>
+            <Link className="mkt-footer-link" to="/about">About Victory Capital</Link>
             <Link className="mkt-footer-link" to="/investment-franchises">Investment Franchises</Link>
             <Link className="mkt-footer-link" to="/market-insights">Insights</Link>
             <button className="mkt-footer-link">Leadership</button>
