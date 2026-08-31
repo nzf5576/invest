@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Trade from './pages/Trade';
 import Contribution from './pages/Contribution';
 import Transfer from './pages/Transfer';
+import OpenAccount from './pages/OpenAccount';
 import DocumentCenter from './pages/DocumentCenter';
 import Forms from './pages/Forms';
 import Messages from './pages/Messages';
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/trade/:accountId" element={<Trade />} />
           <Route path="/contribution/:accountId" element={<Contribution />} />
           <Route path="/transfer" element={<Transfer />} />
+          <Route path="/open-account" element={<OpenAccount />} />
         </Route>
       </Routes>
     </AuthProvider>

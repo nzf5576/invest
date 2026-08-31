@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { savedApplications as initialApps } from '../../data/mockData';
 
 export default function SavedApplications() {
@@ -20,7 +21,7 @@ export default function SavedApplications() {
               <div className="saved-app-date">{app.date}</div>
             </div>
             <div className="saved-app-actions">
-              <button className="btn-continue" aria-label={`Continue ${app.text}`}>Continue →</button>
+              <Link className="btn-continue" to="/open-account" style={{ textDecoration: 'none' }} aria-label={`Continue ${app.text}`}>Continue →</Link>
               <button
                 className="btn-dismiss"
                 aria-label={`Dismiss ${app.text}`}
