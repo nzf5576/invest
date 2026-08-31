@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import type { FranchiseKey } from '../types/marketing';
 import { demoProperties, franchises } from '../data/franchises';
@@ -21,13 +21,8 @@ export default function MarketingSite() {
   const [searchParams] = useSearchParams();
   const franchiseParam = searchParams.get('franchise');
   const [activeKey, setActiveKey] = useState<FranchiseKey>(isFranchiseKey(franchiseParam) ? franchiseParam : 'corporate');
-  const contactRef = useRef<HTMLDivElement>(null);
 
   const property = franchises[activeKey];
-
-  function scrollToContact() {
-    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }
 
   return (
     <div
@@ -35,12 +30,12 @@ export default function MarketingSite() {
       style={{ '--mkt-accent': property.accent, '--mkt-accent-bg': property.accentBg } as React.CSSProperties}
     >
       <PreviewBar active={activeKey} onChange={setActiveKey} />
-      <MasterBar active={activeKey} onSelectProperty={setActiveKey} onScrollToContact={scrollToContact} />
+      <MasterBar active={activeKey} onSelectProperty={setActiveKey} />
       <MarketingNav property={property} />
       <MarketingHero property={property} />
       <SiteMap onSelectProperty={setActiveKey} />
       <StrategyCards property={property} />
-      <ContactSection ref={contactRef} />
+      <ContactSection />
       <TrustBand property={property} />
       <MarketingFooter property={property} />
     </div>

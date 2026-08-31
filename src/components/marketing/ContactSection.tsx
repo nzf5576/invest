@@ -1,14 +1,12 @@
-import { forwardRef } from 'react';
-
 const contactCards = [
   { icon: '👤', bg: '#eef4ff', title: 'Individual Investors', desc: 'Questions about your account, transactions, or getting started as a new investor.', phone: '1-800-235-8396', hours: 'Mon–Fri · 7:30 AM – 7:00 PM CT', btn: 'Start Live Chat' },
   { icon: '🤝', bg: '#f0fdf4', title: 'Financial Professionals', desc: 'Model portfolios, practice management support, and dedicated wholesaler contacts.', phone: '1-800-235-8397', hours: 'Mon–Fri · 8:00 AM – 6:00 PM CT', btn: 'Find My Wholesaler' },
   { icon: '🏛️', bg: '#faf5ff', title: 'Institutional Investors', desc: 'RFPs, consultant relations, composite data requests, and institutional client service.', phone: '1-800-235-8398', hours: 'Mon–Fri · 8:00 AM – 6:00 PM CT', btn: 'Contact Institutional Team' },
 ];
 
-const ContactSection = forwardRef<HTMLDivElement>((_props, ref) => {
+export default function ContactSection() {
   return (
-    <div className="mkt-contact-section" ref={ref}>
+    <div className="mkt-contact-section">
       <div className="mkt-contact-header">
         <div className="mkt-contact-label">We're Here to Help</div>
         <h2 className="mkt-contact-title">Contact Victory Capital</h2>
@@ -43,8 +41,4 @@ const ContactSection = forwardRef<HTMLDivElement>((_props, ref) => {
       </div>
     </div>
   );
-});
-
-ContactSection.displayName = 'ContactSection';
-
-export default ContactSection;
+}

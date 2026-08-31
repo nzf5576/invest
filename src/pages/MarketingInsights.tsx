@@ -27,7 +27,7 @@ export default function MarketingInsights() {
   return (
     <div className="mkt-site" style={{ '--mkt-accent': property.accent, '--mkt-accent-bg': property.accentBg } as React.CSSProperties}>
       <PreviewBar active={activeKey} onChange={setActiveKey} />
-      <MasterBar active={activeKey} onSelectProperty={setActiveKey} onScrollToContact={() => {}} />
+      <MasterBar active={activeKey} onSelectProperty={setActiveKey} />
       <MarketingNav property={property} active="insights" />
 
       <div className="mkt-section">

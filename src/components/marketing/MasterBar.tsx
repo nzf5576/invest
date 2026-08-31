@@ -6,7 +6,6 @@ import { demoProperties, franchises } from '../../data/franchises';
 interface Props {
   active: FranchiseKey;
   onSelectProperty: (key: FranchiseKey) => void;
-  onScrollToContact: () => void;
 }
 
 const propertyDotColors: Record<FranchiseKey, string> = {
@@ -52,7 +51,7 @@ const loginPanels: Record<LoginTab, { desc: string; idLabel: string; submitLabel
   },
 };
 
-export default function MasterBar({ active, onSelectProperty, onScrollToContact }: Props) {
+export default function MasterBar({ active, onSelectProperty }: Props) {
   const [loginOpen, setLoginOpen] = useState(false);
   const [loginTab, setLoginTab] = useState<LoginTab>('investor');
   const [propertyOpen, setPropertyOpen] = useState(false);
@@ -74,7 +73,7 @@ export default function MasterBar({ active, onSelectProperty, onScrollToContact 
   return (
     <div className="mkt-master-bar" ref={rootRef}>
       <div className="mkt-master-bar-left">
-        <button className="mkt-link-btn" onClick={onScrollToContact}>Contact Us</button>
+        <Link className="mkt-link-btn" to="/contact">Contact Us</Link>
         <span>Careers</span>
         <span>Newsroom</span>
       </div>

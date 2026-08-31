@@ -9,6 +9,7 @@ import MarketingSite from './pages/MarketingSite';
 import InvestmentFranchises from './pages/InvestmentFranchises';
 import MarketingInsights from './pages/MarketingInsights';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Trade from './pages/Trade';
 import Contribution from './pages/Contribution';
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/investment-franchises" element={<InvestmentFranchises />} />
         <Route path="/market-insights" element={<MarketingInsights />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/site" element={<Login />} />
         <Route element={<ProtectedLayout><AppLayout /></ProtectedLayout>}>

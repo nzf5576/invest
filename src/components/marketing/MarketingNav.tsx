@@ -3,7 +3,7 @@ import type { FranchiseProperty } from '../../types/marketing';
 
 interface Props {
   property: FranchiseProperty;
-  active?: 'home' | 'franchises' | 'insights' | 'about';
+  active?: 'home' | 'franchises' | 'insights' | 'about' | 'contact';
 }
 
 export default function MarketingNav({ property, active = 'home' }: Props) {
@@ -29,7 +29,7 @@ export default function MarketingNav({ property, active = 'home' }: Props) {
           <Link to="/investment-franchises" style={active === 'franchises' ? activeStyle : undefined}>Investment Franchises</Link>
           <Link to="/market-insights" style={active === 'insights' ? activeStyle : undefined}>Insights</Link>
           <Link to="/about" style={active === 'about' ? activeStyle : undefined}>About Us</Link>
-          <button>Contact</button>
+          <Link to="/contact" style={active === 'contact' ? activeStyle : undefined}>Contact</Link>
         </div>
       </div>
       <div className="mkt-nav-right">
