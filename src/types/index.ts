@@ -55,6 +55,7 @@ export interface Goal {
   currentAmount: number;
   pct: number;
   color: string;
+  accountIds?: string[];
 }
 
 export interface SavedApplication {

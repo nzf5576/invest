@@ -27,6 +27,9 @@ export default function NavBar() {
           <NavLink to="/invest-with-us" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
             Invest with Us
           </NavLink>
+          <NavLink to="/my-performance" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
+            My Performance
+          </NavLink>
           <NavLink to="/insights" role="menuitem" className={({ isActive }) => (isActive ? 'active' : '')}>
             Insights
           </NavLink>

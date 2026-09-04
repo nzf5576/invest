@@ -60,9 +60,9 @@ export const accountTypeSummaries: AccountTypeSummary[] = [
 ];
 
 export const goals: Goal[] = [
-  { id: 'retirement', icon: '🏖️', name: 'Retirement', targetAmount: 1200000, targetYear: 2042, currentAmount: 398000, pct: 33, color: 'var(--navy)' },
-  { id: 'college', icon: '🎓', name: 'College Fund', targetAmount: 120000, targetYear: 2035, currentAmount: 60, pct: 1, color: 'var(--accent)' },
-  { id: 'home', icon: '🏠', name: 'Home Purchase', targetAmount: 80000, targetYear: 2028, currentAmount: 49600, pct: 62, color: 'var(--teal)' },
+  { id: 'retirement', icon: '🏖️', name: 'Retirement', targetAmount: 1200000, targetYear: 2042, currentAmount: 398000, pct: 33, color: 'var(--navy)', accountIds: ['0268', '0667'] },
+  { id: 'college', icon: '🎓', name: 'College Fund', targetAmount: 120000, targetYear: 2035, currentAmount: 60, pct: 1, color: 'var(--accent)', accountIds: ['0268'] },
+  { id: 'home', icon: '🏠', name: 'Home Purchase', targetAmount: 80000, targetYear: 2028, currentAmount: 49600, pct: 62, color: 'var(--teal)', accountIds: ['0268'] },
 ];
 
 export const savedApplications: SavedApplication[] = [

@@ -20,6 +20,7 @@ import Forms from './pages/Forms';
 import Messages from './pages/Messages';
 import Profile from './pages/Profile';
 import InvestWithUs from './pages/InvestWithUs';
+import MyPerformance from './pages/MyPerformance';
 import Insights from './pages/Insights';
 import ToolsResources from './pages/ToolsResources';
 
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/messages" element={<Messages />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/invest-with-us" element={<InvestWithUs />} />
+          <Route path="/my-performance" element={<MyPerformance />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/tools-resources" element={<ToolsResources />} />
         </Route>
